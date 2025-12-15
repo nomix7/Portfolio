@@ -197,7 +197,7 @@ header p {
 .social-tiktok { background-color: #000000; border: 1px solid #333; }
 .social-x { background-color: #000000; }
 
-/* === RESPONSIVE (MÓVIL) === */
+/* === RESPONSIVE MÓVIL === */
 @media (max-width: 768px) {
     .bento-grid {
         grid-template-columns: 1fr;
