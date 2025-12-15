@@ -1,7 +1,7 @@
 :root {
-    --bg-color: #0f0f13;       /* Fondo muy oscuro */
+    --bg-color: #0f0f13;       /* Fondo oscuro */
     --card-bg: #1c1c24;        /* Fondo de las tarjetas */
-    --accent: #5865F2;         /* Azul tipo Discord */
+    --accent: #5865F2;         /* Azul Discord */
     --text-main: #ffffff;
     --text-sec: #a0a0a0;
 }
@@ -21,13 +21,13 @@ body {
     padding: 2rem;
 }
 
-/* Contenedor principal limitado a 1200px */
+/* Contenedor principal */
 .container {
     width: 100%;
     max-width: 1200px;
 }
 
-/* Header simple con Foto de Perfil */
+/* Header con Foto de Perfil */
 header {
     text-align: center;
     margin-bottom: 3rem;
@@ -36,7 +36,7 @@ header {
     align-items: center;
 }
 
-/* Estilos para tu foto */
+/* Estilos para la foto */
 .profile-img {
     width: 150px;
     height: 150px;
@@ -62,7 +62,7 @@ header p {
     font-size: 1.1rem;
 }
 
-/* EL BENTO GRID */
+
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
