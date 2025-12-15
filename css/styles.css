@@ -1,0 +1,213 @@
+:root {
+    --bg-color: #0f0f13;       /* Fondo muy oscuro */
+    --card-bg: #1c1c24;        /* Fondo de las tarjetas */
+    --accent: #5865F2;         /* Azul tipo Discord */
+    --text-main: #ffffff;
+    --text-sec: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Contenedor principal limitado a 1200px */
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Header simple con Foto de Perfil */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para tu foto */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header span {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+header p {
+    color: var(--text-sec);
+    font-size: 1.1rem;
+}
+
+/* EL BENTO GRID */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+}
+
+/* Estilo base de las tarjetas */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+
+/* === CONFIGURACIÓN DE TAMAÑOS DE CAJAS === */
+
+.card-bot {
+    grid-column: span 2;
+    grid-row: span 1;
+    background: linear-gradient(145deg, #1c1c24, #23232e);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-stack {
+    grid-column: span 2;
+}
+
+/* === Estilo para la foto del Bot === */
+.bot-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+}
+
+.card-bot p {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.card-spotify {
+    grid-column: span 1;
+    grid-row: span 2;
+    padding: 0;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.card-social {
+    grid-column: span 1;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+/* === ESTILOS INTERNOS === */
+
+.bot-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bot-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #4752c4;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+    color: var(--text-sec);
+    margin-top: 1rem;
+}
+
+.tech-icons i:hover {
+    color: var(--text-main);
+    transition: 0.3s;
+}
+
+.card-social i {
+    margin-bottom: 0.5rem;
+}
+
+.card-social span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-github { background-color: #24292e; }
+.social-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-tiktok { background-color: #000000; border: 1px solid #333; }
+.social-x { background-color: #000000; }
+
+/* === RESPONSIVE (MÓVIL) === */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-bot,
+    .card-spotify,
+    .card-stack,
+    .card-social {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
