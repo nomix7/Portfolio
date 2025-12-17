@@ -2,7 +2,7 @@
 
 Bienvenido al repositorio de mi página web personal. Este proyecto es un portafolio diseñado con estilo Bento Grid (inspirado en la UI moderna y Discord), totalmente responsivo y optimizado.
 
-**Ver Demo en vivo:** [https://nomix7.github.io/portfolio/](https://nomix7.github.io/portfolio/)
+**Ver Demo en vivo:** [https://nomix7.github.io/Portfolio/](https://nomix7.github.io/Portfolio/)
 
 ## Tecnologías Usadas
 * **HTML5:** Estructura semántica.
